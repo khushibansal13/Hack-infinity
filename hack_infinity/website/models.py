@@ -41,6 +41,7 @@ class Invitation_confirmation(models.Model):
 
     def create(username,invitee):
         book = Invitation_confirmation(username=username,Invitee=invitee)
+        
         # do something with the book
         return book
 
