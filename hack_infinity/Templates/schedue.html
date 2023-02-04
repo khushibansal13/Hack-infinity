@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=<h<>, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Hammersmith+One&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <title>Schedule</title>
+</head>
+<style>
+  body{
+    background-image:url(./bg.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .quote{
+  font-family: dm sans;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #000;
+  font-size: 1.5rem;
+  text-align: center;
+  }
+  .form {
+    background-color: #ffffff;
+    width: 50rem;
+    height: 45rem;
+    margin: 2.5rem auto 0 auto;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  }
+  .form h1{
+    
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .generate{
+    margin-left: 3rem;
+    padding: 0.5rem;
+    width: 20rem;
+    border-radius: 1rem;
+    border: 1px solid #000;
+    background-color: #FFC090;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .event{
+    margin: 0 0 0 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 2rem;
+    margin-left: 7rem;
+  }
+  .sub-event{
+    margin: 0 0 0 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 2rem;
+    margin-left: 7rem;
+  }
+  .timetable {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .prompt{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+</style>
+<body>
+  
+  <div class="form">
+    <form>
+      <h1 class="quote">Here is your day</h1>
+      <label class="event">Event name : <span>lorem.5</span></label>
+      <br>
+      <label class="event">Venue : <span>lorem.5</span></label>
+      <br>
+      <label class="event">Date : <span>lorem.5</span></label>
+      <br>
+      <h2 class="quote">Here is your schedule</h2>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+
+      
+      <br>
+      <br>
+      <div class="prompt">
+        <input id="go" type="button" value="Enter User ID" class="generate" onclick="prompt('Your user ID', 'Homer');">
+        <input id="go" type="button" value="Send Invitation" class="generate" onclick="prompt('User ID of Guest', 'Homer');">
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
