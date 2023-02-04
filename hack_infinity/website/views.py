@@ -10,19 +10,20 @@ def invite(request):
     return render(request,'invite.html')
 
 def inviting(request):
-    # username=request.GET['admin']
-    numb_of_people=request.POST['users']
+    username=request.GET['admin']
+    numb_of_people=request.GET['users']
     list=numb_of_people.split(',')
     # print(username)
     # curr=request.user
     # invitee=User.username
-    # invitee=username
-    # print(username)
-    print(numb_of_people)
-    # for i in list:
-    #     invitation=Invitation.create(username=i,invitee=invitee)
-    #     invitation.save()
-    return render(request,'landing_page.html')
+    invitee=username
+    print(list)
+    # print(numb_of_people)
+    for i in list:
+        print(i)
+        invitation=Invitation.create(username=i,invitee=invitee)
+        invitation.save()
+    return render(request,'landing_page.html',{'msg':numb_of_people,'msg2':username})
 
 def create_event(request):
     return render(request,'create_event.html')

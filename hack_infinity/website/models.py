@@ -41,7 +41,7 @@ class Invitation_confirmation(models.Model):
 
 
     def create(username,invitee,response):
-        book = Invitation(username=username,Invitee=invitee,Response=response)
+        book = Invitation_confirmation(username=username,Invitee=invitee,Response=response)
         # do something with the book
         return book
 
@@ -51,7 +51,7 @@ class Invitation_confirmation(models.Model):
 class events(models.Model):
     id:int
     event:str
-    time:str
+    time:str    
 
 # class user_info(models.Model):
 #     username=models.CharField('username',max_length=32)
