@@ -3,14 +3,14 @@
     padding: 0;
 }
 body{
-    background: linear-gradient(rgba(212, 21, 230, 0.5),rgba(219, 22, 170, 0.5)), url(./images/bg.png);
+    background-image:url(./images/start.png) ;
     background-size: cover;
     background-position: center;
 }
 
 .main-container {
     display: grid;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 3fr 4fr;
     height:100vh;
     background-size: cover;
     background-position: center;
@@ -22,6 +22,8 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+
 .about{
     text-align: right;
     color: #fff;
