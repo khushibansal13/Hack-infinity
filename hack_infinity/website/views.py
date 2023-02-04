@@ -77,9 +77,11 @@ def logging(request):
         password=request.POST['pw']
         user=auth.authenticate(username=username,password=password)
         if user is not None:
-                return render(request,'D:\Programming\Web developement\hack_infinity\Templates\landing_page.html')
+                return render(request,'D:\Programming\Web developement\hack_infinity\Templates\landing_page.html',{'user':user  })
         
 # def landing_page(request):
 #     return render(request,'landing_page.html')
-#     auth.logout(request)
-#     return redirect('/')
+def logout(request):
+
+    auth.logout(request)
+    return render(request,'index.html')

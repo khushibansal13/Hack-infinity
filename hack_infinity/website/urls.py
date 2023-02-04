@@ -11,6 +11,7 @@ urlpatterns=[
     # path('index.html',views.index)
     path('login',views.login,name='login'),
     path('logging',views.logging,name='logging'),
+    path('logout',views.logout,name='logout'),
     # path('landing_page',views.landing_page,name='landing_page'),
     # path('display_names',views.display_names,name='display_names'),
     # path('send_mail',views.send_mail,name='send_mail'),
