@@ -70,7 +70,7 @@ def create_schedule(request):
     event6.time=request.GET.get('time6')
     
     eves=[event1,event2,event3,event4,event5,event6]
-    return render(request,'schedule.html',{'event_name':event_name,'venue':venue,'date':date,'eves':eves})
+    return render(request,'my_invitations.html',{'event_name':event_name,'venue':venue,'date':date,'eves':eves})
 
 def show_event_details(request):
     

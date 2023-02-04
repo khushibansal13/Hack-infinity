@@ -77,6 +77,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .border{
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+  }
 </style>
 <body>
   
@@ -84,43 +89,22 @@
   <div class="form">
     <form>
       <h1 class="quote">Here is your day</h1>
-      <label class="event">Event name : <span>lorem.5</span></label>
+      <label class="event">Event name : <span>{{event_name}}</span></label>
       <br>
-      <label class="event">Venue : <span>lorem.5</span></label>
+      <label class="event">Venue : <span>{{venue}}</span></label>
       <br>
-      <label class="event">Date : <span>lorem.5</span></label>
+      <label class="event">Date : <span>{{date}}</span></label>
       <br>
+      
       <h2 class="quote">Here is your schedule</h2>
+      <div class=border>
+        {% for i in eves %}
       <div class="timetable">
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>{{i.event}}</span></label>
+        <label class="sub-event"> <span>{{i.time}}</span></label>
         <br>
       </div>
-      <div class="timetable">
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <br>
-      </div>
-      <div class="timetable">
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <br>
-      </div>
-      <div class="timetable">
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <br>
-      </div>
-      <div class="timetable">
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <br>
-      </div>
-      <div class="timetable">
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <label class="sub-event"> <span>lorem.5</span></label>
-        <br>
-      </div>
+      {% endfor %}
 
       
       <br>
