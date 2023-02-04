@@ -34,10 +34,8 @@ def create_schedule(request):
         sub_event=request.GET.get(list_event[i])
         time=request.GET.get(list_time[i])
         new=CreateEventInfo.create(event_name=event_name,venue=venue,date=date,sub_event=sub_event,time=time)
-        # print(sub_event)
         new.save()
-        # print(sub_event)
-    return render(request,'schedue.html')
+    return render(request,'schedule.html')
 
 def show_event_details(request):
     
