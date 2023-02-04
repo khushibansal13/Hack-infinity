@@ -36,12 +36,11 @@ class CreateEventInfo(models.Model):
 class Invitation_confirmation(models.Model):
     username=models.CharField('Username',max_length=32)
     Invitee=models.CharField('Invitee',max_length=32)
-    Response=models.CharField('Response',max_length=32,default='No')
     
 
 
-    def create(username,invitee,response):
-        book = Invitation_confirmation(username=username,Invitee=invitee,Response=response)
+    def create(username,invitee):
+        book = Invitation_confirmation(username=username,Invitee=invitee)
         # do something with the book
         return book
 
