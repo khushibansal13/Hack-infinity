@@ -77,6 +77,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .border{
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+  }
 </style>
 <body>
   
@@ -92,7 +97,8 @@
       <br>
       
       <h2 class="quote">Here is your schedule</h2>
-      {% for i in eves %}
+      <div class=border>
+        {% for i in eves %}
       <div class="timetable">
         <label class="sub-event"> <span>{{i.event}}</span></label>
         <label class="sub-event"> <span>{{i.time}}</span></label>
