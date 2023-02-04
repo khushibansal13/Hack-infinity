@@ -13,6 +13,7 @@ urlpatterns=[
     path('logging',views.logging,name='logging'),
     path('logout',views.logout,name='logout'),
     path('inviting',views.inviting,name='inviting'),
+    path('invite',views.invite,name='invite'),
     path('create_event',views.create_event,name='create_event'),
     path('create_schedule',views.create_schedule,name='create_schedule'),
     path('show_event_details',views.show_event_details,name='show_event_details'),

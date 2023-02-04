@@ -1,25 +1,28 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User,auth
-from .models import Invitation,Invitation_confirmation,CreateEventInfo
+from .models import Invitation,Invitation_confirmation,CreateEventInfo,events   
 
 from django.db import connection
 # Create your views here.def register(request):
 # def send_mail(request):
     # return render(request,'send_mail.html')
+def invite(request):
+    return render(request,'invite.html')
 
 def inviting(request):
-    numb_of_people=request.GET['users']
+    # username=request.GET['admin']
+    numb_of_people=request.POST['users']
     list=numb_of_people.split(',')
-    username=request.GET['admin']
-    print(list)
+    # print(username)
     # curr=request.user
     # invitee=User.username
-    invitee=username
-    print(username)
-    for i in list:
-        invitation=Invitation.create(username=i,invitee=invitee)
-        invitation.save()
-    return render(request,'registration.html')
+    # invitee=username
+    # print(username)
+    print(numb_of_people)
+    # for i in list:
+    #     invitation=Invitation.create(username=i,invitee=invitee)
+    #     invitation.save()
+    return render(request,'landing_page.html')
 
 def create_event(request):
     return render(request,'create_event.html')
@@ -28,14 +31,45 @@ def create_schedule(request):
     event_name=request.GET.get('event_name')
     venue=request.GET.get('venue')
     date=request.GET.get('date')
+
     list_event=['event1','event2','event3','event4','event5','event6'] 
     list_time=['time1','time2','time3','time4','time5','time6'] 
+    x=0
     for i in range(6):
-        sub_event=request.GET.get(list_event[i])
-        time=request.GET.get(list_time[i])
-        new=CreateEventInfo.create(event_name=event_name,venue=venue,date=date,sub_event=sub_event,time=time)
-        new.save()
-    return render(request,'schedule.html')
+        # if x==0:
+            sub_event=request.GET.get(list_event[i])
+            time=request.GET.get(list_time[i])
+            new=CreateEventInfo.create(event_name=event_name,venue=venue,date=date,sub_event=sub_event,time=time)
+            new.save()
+            # x+=1
+        # else:
+        #     return render(request,'landing_page.html ')
+    event1=events()
+    event1.event=request.GET.get('event1')
+    event1.time=request.GET.get('time1')
+
+    event2=events()
+    event2.event=request.GET.get('event2')
+    event2.time=request.GET.get('time2')
+    
+    event3=events()
+    event3.event=request.GET.get('event3')
+    event3.time=request.GET.get('time3')
+    
+    event4=events()
+    event4.event=request.GET.get('event4')
+    event4.time=request.GET.get('time4')
+    
+    event5=events()
+    event5.event=request.GET.get('event5')
+    event5.time=request.GET.get('time5')
+    
+    event6=events()
+    event6.event=request.GET.get('event6')
+    event6.time=request.GET.get('time6')
+    
+    eves=[event1,event2,event3,event4,event5,event6]
+    return render(request,'schedule.html',{'event_name':event_name,'venue':venue,'date':date,'eves':eves})
 
 def show_event_details(request):
     
@@ -114,7 +148,7 @@ def logging(request):
         password=request.POST['pw']
         user=auth.authenticate(username=username,password=password)
         if user is not None:
-                return render(request,'D:\Programming\Web developement\hack_infinity\Templates\landing_page.html',{'user':user  })
+                return render(request,'landing_page.html',{'user':user  })
          
 # def landing_page(request):
 #     return render(request,'landing_page.html')

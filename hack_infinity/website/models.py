@@ -21,6 +21,7 @@ class CreateEventInfo(models.Model):
     date=models.DateField('date',max_length=32)
     sub_event=models.CharField('sub_event',max_length=32)
     time=models.TimeField('time',max_length=32)
+    # venue=models.CharField('venue',max_length=32)
     
 
 
@@ -46,6 +47,11 @@ class Invitation_confirmation(models.Model):
 
     def __str__(self):
         return self.username
+
+class events(models.Model):
+    id:int
+    event:str
+    time:str
 
 # class user_info(models.Model):
 #     username=models.CharField('username',max_length=32)
