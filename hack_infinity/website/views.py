@@ -37,7 +37,7 @@ def create_schedule(request):
         print(sub_event)
         new.save()
         print(sub_event)
-    return render(request,'landing_page.html')
+    return render(request,'schedue.html')
 
 def show_event_details(request):
     
