@@ -28,7 +28,7 @@
   .form {
     background-color: #ffffff;
     width: 50rem;
-    height: 45rem;
+    height: 59rem;
     margin: 2.5rem auto 0 auto;
     border-radius: 1rem;
     padding: 0.7rem;
@@ -43,7 +43,7 @@
     text-align: center;
   }
   .generate{
-    margin-left: 3rem;
+    text-align: center;
     padding: 0.5rem;
     width: 20rem;
     border-radius: 1rem;
@@ -52,6 +52,8 @@
     color: #333;
     font-weight: 700;
     font-size: 1.2rem;
+    margin-left: 15rem;
+    margin-top: 2rem;
   }
   .event{
     margin: 0 0 0 2rem;
@@ -82,39 +84,74 @@
     border-radius: 0.5rem;
     padding: 0.7rem;
   }
+  .rsvp{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 2rem;
+  }
+
 </style>
 <body>
   
   
   <div class="form">
     <form>
-      <li>user : {{user}}</li>
-      <h1 class="quote">Here is your day</h1>
+      <h1 class="quote">You are invited by, <span>Username</span></h1>
       <label class="event">Event name : <span>{{event_name}}</span></label>
       <br>
       <label class="event">Venue : <span>{{venue}}</span></label>
       <br>
       <label class="event">Date : <span>{{date}}</span></label>
       <br>
-      
       <h2 class="quote">Here is your schedule</h2>
       <div class=border>
-        {% for i in eves %}
-      <div class="timetable">
-        <label class="sub-event"> <span>{{i.event}}</span></label>
-        <label class="sub-event"> <span>{{i.time}}</span></label>
+        <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
         <br>
       </div>
-      {% endfor %}
-
-      
-      <br>
-      <br>
-      <div class="prompt">
-        <input id="go" type="button" value="Enter User ID" class="generate" onclick="prompt('Your user ID', 'Homer');">
-        <input id="go" type="button" value="Send Invitation" class="generate" onclick="prompt('User ID of Guest', 'Homer');">
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
       </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      <div class="timetable">
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <label class="sub-event"> <span>lorem.5</span></label>
+        <br>
+      </div>
+      </div>
+      <div class="rsvp">
+        <p>Confirm your presence:</p>
+        <form>
+          <input type="radio">
+          <label>I'm coming</label>
+          <input type="radio">
+          <label>I'm not coming</label>
+        </form>
+      </div>
+      <input type="submit" value="Submit" class="generate">
     </form>
   </div>
+  
+  
+  
 </body>
 </html>

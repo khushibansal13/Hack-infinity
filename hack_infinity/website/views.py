@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User,auth
+from django.contrib.auth.decorators import login_required
 from .models import Invitation,Invitation_confirmation,CreateEventInfo,events   
 
 from django.db import connection
@@ -27,6 +28,9 @@ def inviting(request):
 
 def create_event(request):
     return render(request,'create_event.html')
+
+def rsvp(request):
+    return render(request,'rsvp.html')
 
 def create_schedule(request):
     event_name=request.GET.get('event_name')
@@ -68,19 +72,22 @@ def create_schedule(request):
     event6=events()
     event6.event=request.GET.get('event6')
     event6.time=request.GET.get('time6')
+
+    userid=request.user.username
+    print(userid)
     
     eves=[event1,event2,event3,event4,event5,event6]
-    return render(request,'my_invitations.html',{'event_name':event_name,'venue':venue,'date':date,'eves':eves})
+    return render(request,'my_invitations.html',{'event_name':event_name,'venue':venue,'date':date,'eves':eves,'user':userid})
 
 def show_event_details(request):
-    
+    userid = request.user
     values=CreateEventInfo.objects.values_list('event_name')
     x=list(values)
     print(x)
     for i in x:
         if i==('hackathon',):
             print("\n yes")
-    return render(request,'index.html')
+    return render(request,'index.html',{'user':userid})
 
     # invitee=request.user
     # print(invitee)
@@ -149,7 +156,8 @@ def logging(request):
         password=request.POST['pw']
         user=auth.authenticate(username=username,password=password)
         if user is not None:
-                return render(request,'landing_page.html',{'user':user  })
+
+                return render(request,'landing_page.html',{'user':user})
          
 # def landing_page(request):
 #     return render(request,'landing_page.html')

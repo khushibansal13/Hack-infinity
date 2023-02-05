@@ -41,14 +41,93 @@
       background:white ;
       border-radius: 10px;
       margin-left: 2rem;
+<<<<<<< HEAD
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    }
+    .schedule-event , .send-invitation , .your-events{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url();
+    }
+    .your-events:hover,.your-events:hover,.your-events:hover{
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .my-invitation:hover,.my-invitation:hover,.my-invitation:hover{
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+     
+    .schedule-event:hover , .schedule-event:hover , .schedule-event:hover{
+      transform: scale(1.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .nav-link{
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      margin-right: 2rem;
+      height: 5rem;
+    }
+    .nav-link li{
+      margin-left: 2rem;
+      margin-top: 1rem;
+    }
+    .nav-bar-opt{
+      text-decoration: none;
+      color: black;
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      background-color: #d5abd0;
+=======
       box-shadow: 0 0 2rem 0 rgba(0,0,0,0.2);
   }
   .create_event{
       width:36rem;
       height: 40rem;
       background:white ;
+>>>>>>> 7249c70a3e8360f6615b08a0782e39e47dff0957
       border-radius: 10px;
       margin-left: 2rem;
+<<<<<<< HEAD
+      margin-top: 2rem;
+
+    }
+    .eventofy_logo{
+      height: 12rem;
+      width: 20rem;
+      margin-left: 2rem;
+      margin-top: 2rem;
+    }
+    header{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+  </style>
+  <header>
+    <img  class="eventofy_logo" src="https://i.ibb.co/QctV407/Even-Tofy-logo.png" alt="logo">
+    <nav>
+      <ul class="nav-link">
+        {% if user.is_authenticated %}
+           
+        <li><a href="#" class="nav-bar-opt">{{ user.username }}</a></li>
+            <li><a href="#" class="nav-bar-opt">About Us</a></li>
+            <form action="logout"><button type="submit" class="nav-bar-opt">Logout</button></form>
+        {% else %}
+            <li><a href="#" class="nav-bar-opt">About Us</a></li>
+            <form action="logout"><button type="submit" class="nav-bar-opt">Logout</button></form>
+        {% endif %}
+
+      </ul>
+    </nav>
+  </header>
+=======
       box-shadow: 0 0 2rem 0 rgba(0,0,0,0.2);
   }
   .my_invitations{
@@ -74,15 +153,24 @@
 </style>
 <body>
   <h1 class="donate">Welcome</h1>
+>>>>>>> 7249c70a3e8360f6615b08a0782e39e47dff0957
   <div class="each">
   <div class="create_event">
     <a class="text" href="./create_event.html">Create Event</a>
   </div>
+<<<<<<< HEAD
+  <div class="your-events">
+    <a class="text" href="my_event">My Event</a>
+  </div>
+  <div class="my-invitation">
+    <a class="text" href="rsvp">My invitation</a>
+=======
   <div class="your_events">
     <a class="text" href="#">Your events</a>
   </div>
   <div class="my_invitations">
     <a class="text" href="">My Invitations</a>
+>>>>>>> 7249c70a3e8360f6615b08a0782e39e47dff0957
   </div>
   </div>
 </body>

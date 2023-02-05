@@ -56,10 +56,10 @@ ROOT_URLCONF = 'hack_infinity.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"Templates"),
-                os.path.join(BASE_DIR,"harshita"),
-                os.path.join(BASE_DIR,"Khushi"),
-                os.path.join(BASE_DIR,"prem")],
+        'DIRS': [os.path.join(BASE_DIR,"Templates")],
+                # os.path.join(BASE_DIR,"harshita"),
+                # os.path.join(BASE_DIR,"Khushi"),
+                # os.path.join(BASE_DIR,"prem")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
