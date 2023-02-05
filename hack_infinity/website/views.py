@@ -8,7 +8,7 @@ from django.db import connection
 # def send_mail(request):
     # return render(request,'send_mail.html')
 def invite(request):
-    return render(request,'invite.html')
+    return render(request,'invite.html')     
 
 def inviting(request):
     username=request.GET['admin']
