@@ -10,6 +10,9 @@ from django.db import connection
 def invite(request):
     return render(request,'invite.html')     
 
+def eventofy(request):
+    return render(request,'eventofy.html')     
+    
 def inviting(request):
     username=request.GET['admin']
     numb_of_people=request.GET['users']
