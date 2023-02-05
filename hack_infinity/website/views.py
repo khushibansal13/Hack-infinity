@@ -12,7 +12,7 @@ def invite(request):
 
 def eventofy(request):
     return render(request,'eventofy.html')     
-    
+
 def inviting(request):
     username=request.GET['admin']
     numb_of_people=request.GET['users']
@@ -162,8 +162,9 @@ def logging(request):
 
                 return render(request,'landing_page.html',{'user':user})
          
-# def landing_page(request):
-#     return render(request,'landing_page.html')
+def landing_page(request):
+    return render(request,'landing_page.html')
+    
 def logout(request):
 
     auth.logout(request)

@@ -81,6 +81,11 @@
   
   <div class="form">
     
+    <div class="navbar">
+      <div class="icon">
+          <h2 class="logo"><img src="https://i.ibb.co/Y2DxY6b/logo.png">
+      </h2></div>
+    <div class="prompt">
       <h1 class="quote">Here is your day</h1>
       <label class="event">Event name : <span>{{event_name}}</span></label>
       <br>
@@ -100,19 +105,13 @@
       
       <br>
       <br>
-      <div class="prompt">
-        <!-- <form action="inviting">
-        <input id="go" type="button" name="admin" value="Enter User ID" class="generate" onclick="prompt('Your user ID', 'Homer');">
-        <input id="go" type="submit" name="users" value="Send Invitation" class="generate" onclick="prompt('User ID of Guest', 'Homer');">
-        </form> -->
-        <!-- <input id="go" type="text" name="users"class="generate" onclick="prompt('User ID of Guest', 'Homer');"> -->
-        <form action="inviting" >
+      
         <input type="text" id="form2_202" class="form-control" name="admin" placeholder="your username" />
         
-        <input type="text" id="form2_202" class="form-control" name="users" placeholder="guests' username" />  
-          <input type="submit" value="enter" >
-        
-          </form>
+        <form action="inviting">
+        <input type="submit" id="form2_202" class="form-control" name="users" placeholder="guests' username" />  
+                 
+        </form>
       </div>
   
   </div>
